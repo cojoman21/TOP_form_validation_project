@@ -1,5 +1,25 @@
+@font-face {
+  font-family: "Norse";
+  src: url("./fonts/Norse.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Norse";
+  src: url("./fonts/Norsebold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
+}
+
+input {
+  appearance: none;
 }
 
 .container {
@@ -8,17 +28,95 @@ body {
 }
 
 .main-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  background-color: rgb(241, 135, 255);
+  background-color: rgb(245, 245, 245);
+}
+
+.main-content .header,
+.footer {
+  background-color: rgb(235, 235, 235);
+  height: 35%;
+}
+
+.main-content .form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  padding-left: 60px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  flex: 1;
+  font-family: Arial, sans-serif;
+}
+
+.signup-form h1 {
+  font-size: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 2px;
+
+}
+
+.form-group input {
+  padding: 5px 6px;
+  font-size: 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-group input.focused,
+.form-group input:focus {
+  border-color: #4a90d9;
+  box-shadow: 0 0 0 1px #4a90d9;
+
+}
+
+.form-group input:user-invalid {
+  border-color: #d9534f;
+}
+
+@media (max-width: 500px) {
+  .form-row {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
-  width: 30%;
+  flex: 0 0 30%;
+  min-width: 250px;
   height: auto;
   background-image: url("./img/halie-west-25xggax4bSA-unsplash.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
 
 .logo-container {
@@ -30,13 +128,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.37);
+  flex-wrap: wrap;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* .logo-container img {
-  position: absolute;
-  width: 100%;
+.logo-container img {
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
   display: block;
-} */
+}
+
+.logo-container p {
+  margin: 0;
+  color: #fff;
+  font-family: "Norse", sans-serif;
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: bold;
+}
+
+.footer button {
+  background-color: #596D48;
+  padding: 4px 10px;
+  margin: 20px;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    flex: 1 1 100%;
+  }
+}
