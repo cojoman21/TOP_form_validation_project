@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Validation Project</title>
   <link rel="stylesheet" href="style.css">
+  <script src="form_validation.js" defer></script>
 </head>
 
 <body>
@@ -18,13 +19,13 @@
     </div>
     <div class="main-content">
       <div class="header">
-        <p>This is not a real online service! You know you need something like this in your life to help you realize
-          your deepest dreams.<br>Sign up <em>now</em> to get started.</p>
-        <p>You <em>know</em> you want to.</p>
+        <h1>This is not a real online service! You know you need something like this in your life to help you realize
+          your deepest dreams.<br>Sign up <em>now</em> to get started.</h1>
+        <h1>You <em>know</em> you want to.</h1>
       </div>
       <div class="form">
-        <form action="#" class="signup-form">
-          <h1>Let's do this</h1>
+        <form class="signup-form" id="myform" action="./" method="post">
+          <h1>Let's do this!</h1>
 
           <div class="form-row">
             <div class="form-group">
@@ -61,8 +62,9 @@
         </form>
       </div>
       <div class="footer">
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a href="#">Log in</a></p>
+        <button form="myform" type="submit" id="submit-form">Create Account</button>
+        <h1>Already have an account? <a href="#">Log in</h1>
+        </p>
       </div>
     </div>
   </div>
