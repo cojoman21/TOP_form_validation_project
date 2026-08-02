@@ -1,69 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Validation Project</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="form_validation.js" defer></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="form_validation.js" defer></script>
+  </head>
 
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="logo-container">
-        <img src="./img/odin-lined.png" alt="The Odin Project logo." />
-        <p>ODIN</p>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo-container">
+          <img src="./img/odin-lined.png" alt="The Odin Project logo." />
+          <p>ODIN</p>
+        </div>
       </div>
-    </div>
-    <div class="main-content">
-      <div class="header">
-        <h1>This is not a real online service! You know you need something like this in your life to help you realize
-          your deepest dreams.<br>Sign up <em>now</em> to get started.</h1>
-        <h1>You <em>know</em> you want to.</h1>
-      </div>
-      <div class="form">
-        <form class="signup-form" id="myform" action="./" method="post">
-          <h1>Let's do this!</h1>
+      <div class="main-content">
+        <div class="header">
+          <h1>
+            This is not a real online service! You know you need something like this in your life to help you realize
+            your deepest dreams.
+            <br>
+            Sign up <em>now</em> to get started.
+          </h1>
+          <h1>
+            You <em>know</em> you want to.
+          </h1>
+        </div>
+        <div class="form">
+          <form class="signup-form" id="myform" action="./" method="post">
+            <h1>Let's do this!</h1>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" id="first-name" name="first-name" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" id="first-name" name="first-name" />
+              </div>
+              <div class="form-group">
+                <label for="last-name">LAST NAME</label>
+                <input type="text" id="last-name" name="last-name" />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="last-name">LAST NAME</label>
-              <input type="text" id="last-name" name="last-name" />
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" />
+              </div>
+              <div class="form-group">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="phone">PHONE NUMBER</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="password">PASSWORD</label>
-              <input type="password" id="password" name="password" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" required minlength="8" />
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input type="password"
+                       id="confirm-password"
+                       name="confirm-password"
+                       required
+                       minlength="8" />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="confirm-password">CONFIRM PASSWORD</label>
-              <input type="password" id="confirm-password" name="confirm-password" />
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="footer">
-        <button form="myform" type="submit" id="submit-form">Create Account</button>
-        <h1>Already have an account? <a href="#">Log in</h1>
+          </form>
+        </div>
+        <div class="footer">
+          <button form="myform" type="submit" id="submit-form">Create Account</button>
+          <h1>
+            Already have an account? <a href="#">Log in
+          </h1>
         </p>
       </div>
     </div>
